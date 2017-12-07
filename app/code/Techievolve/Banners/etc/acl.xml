@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Acl/etc/acl.xsd">
+    <acl>
+        <resources>
+            <resource id="Techievolve_Adminhtml::admin">
+                <resource id="Techievolve_Banners::banners" title="Banners" sortOrder="40">
+                    <resource id="Techievolve_Banners::manage" title="Banners Module" sortOrder="10">
+						<resource id="Techievolve_Banners::save" title="Save Banners" sortOrder="10" />
+                        <resource id="Techievolve_Banners::news_delete" title="Delete Banners" sortOrder="20" />
+					</resource>
+                </resource>
+                <resource id="Techievolve_Adminhtml::stores">
+                    <resource id="Techievolve_Adminhtml::stores_settings">
+                        <resource id="Techievolve_Adminhtml::config">
+                            <resource id="Techievolve_Banners::config_banners" title="Banners Section" sortOrder="50" />
+                        </resource>
+                    </resource>
+                </resource>
+            </resource>
+        </resources>
+    </acl>
+</config>

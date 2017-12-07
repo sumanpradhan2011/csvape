@@ -1,0 +1,22 @@
+<?php /** @var $block \Ashsmith\Blog\Block\PostList */ ?>
+<h1><?php echo __('Latest Blog Posts') ?></h1>
+<ul class="blog-post-list">
+<?php /** @var $post \Ashsmith\Blog\Model\Post */ ?>
+<?php foreach ($block->getQuestions() as $post): ?>
+    <li class="blog-post-list-item">
+        
+
+        <div class="blog-post-item-content">
+            <?php echo $post->getQuestion(); ?>
+        </div>
+        <?php foreach ($block->getQuestionAnswers($post->getId()) as $answer) {
+
+             echo $answer->getAnswer();
+        }
+        ?>
+        <div class="blog-post-item-meta">
+            <strong><?php echo __('Created at:') ?></strong> <?php //echo $post->getCreationTime() ?>
+        </div>
+    </li>
+<?php endforeach; ?>
+</ul>

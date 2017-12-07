@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../Magento/Backend/etc/system_file.xsd">
+    <system>
+         <!-- create section -->
+        <section id="quickaccess" translate="label" type="text" sortOrder="35" showInDefault="1" showInWebsite="1" showInStore="1">           
+            <label>QuickAccess</label>
+            <!-- Assign section to tab -->
+            <tab>techievolvecore</tab>
+            <resource>Techievolve_Featuredproducts::featuredproducts</resource>
+            <!-- create group for fields in section -->
+            <group id="general" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                <label>General</label>
+                <!-- create field -->
+                <field id="enable" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Enable</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+			</group>
+			
+			<group id="featuredproducts" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                <label>Featured Products</label>
+                <!-- create field -->
+                <field id="enable" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Enable</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+								
+			</group>
+			
+			
+        </section>
+    </system>
+</config>

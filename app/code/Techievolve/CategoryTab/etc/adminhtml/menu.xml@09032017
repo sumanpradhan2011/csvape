@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2015 Artis. All rights reserved.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../Backend/etc/menu.xsd">
+    <menu>
+        <add id="Artis_Wallmurals::artis_wallpapertoolindex" title="Wallpaper Tool" module="Artis_Wallmurals"  sortOrder="20" dependsOnModule="Artis_Wallmurals" action="wallmurals/wallpapertool/index" resource="Artis_Wallmurals::artis_wallpapertoolindex"/>
+        <!--<add id="Artis_Wallmurals::artis_customprice_index" title="Customprice" module="Artis_Wallmurals"  sortOrder="20" dependsOnModule="Artis_Wallmurals" action="wallmurals/customprice/index" resource="Artis_Wallmurals::artis_customprice_index"/>
+        <add id="Artis_Wallmurals::artis_resolution_index" title="Resolution" module="Artis_Wallmurals"  sortOrder="20" dependsOnModule="Artis_Wallmurals" action="wallmurals/resolution/index" resource="Artis_Wallmurals::artis_resolution_index"/>-->
+<!--AddMenu-->
+    </menu>
+</config>

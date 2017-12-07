@@ -1,0 +1,14 @@
+<?php
+/**
+ * Copyright © 2013-2017 Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+/**
+ * @var \Magento\Framework\View\Element\Template $block
+ */
+?>
+<?php $_recaptchaHelper = $this->helper('Techievolve\ReCaptcha\Helper\Data'); ?>
+<?php if ($_recaptchaHelper->isEnabled() && $_recaptchaHelper->isAllowed($this->getRequest()->getFullActionName())): ?>
+  <script async="async" src='https://www.google.com/recaptcha/api.js'></script>
+  <div class="g-recaptcha" data-sitekey="<?php echo $_recaptchaHelper->getSiteKey(); ?>"></div>
+<?php endif; ?>

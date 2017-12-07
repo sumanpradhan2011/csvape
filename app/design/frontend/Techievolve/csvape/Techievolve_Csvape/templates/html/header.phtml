@@ -1,0 +1,130 @@
+ <?php $block = $this->getLayout()->createBlock('Magento\Cms\Block\Block'); ?>
+<div class="header-container">
+     <div class="navbar-wrapper navbar-desktop">
+         <div class="top-header">
+              <div class="container-fluid shborder-bot onlylarg">
+                   <div class="top-head-row">
+                        <div class="col-lg-7 col-md-7 col-sm-7 col-xs-6 col-xss-12">
+                              <?php 
+                                   $block->setBlockId('csvape_topbar_help');
+                                   if($block){
+                                       echo $block->toHtml();
+                                   }                              
+                              ?>
+                             
+                        </div>
+                         <div class="col-lg-5 col-md-5 col-sm-5 col-xs-6 col-xss-12">
+                              <?php 
+                                   $block->setBlockId('csvape_topbar_socials');
+                                   if($block){
+                                       echo $block->toHtml();
+                                   }                              
+                              ?>
+                         </div>
+                   </div>       
+               </div>
+               <div id="bar" class="container-fluid bottom-head-row">        
+                    <div class="onlylarg">
+                         <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6 col-xss-12">
+                              <?php echo $this->getChildHtml("logo"); ?>
+                         </div>
+                         <div class="col-lg-7 col-md-7 col-sm-7 col-xs-6 col-xss-12 top-search">
+                              <?php echo $this->getChildHtml("top.search"); ?>
+                         </div>
+                         <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 col-xss-12">
+                              <div class="myacount">
+                                   <a href="javascript:void(0)">My Account <span class="caret"></span></a>
+                                    <div class="myacountDiv">
+                                        <ul>
+                                             <li><a href="javascript:void(0)">Your Account</a></li>
+                                            <li><a href="javascript:void(0)">Your Orders</a></li>
+                                            <li><a href="javascript:void(0)">Your Wish List</a></li>
+                                            <li><a href="javascript:void(0)">Register</a></li>
+                                            <li><a href="javascript:void(0)">Logout</a></li>
+                                        </ul>
+                                   </div>
+                              </div>
+                              <div class="mycart">
+                                   <a href="javascript:void(0)">Cart (02)</a>
+                              </div>
+                         </div>
+                    </div>
+                   <div class="navbar-wrapper-mobile">		
+                        <div class="container">
+                             <div class="row">
+                                  <div class="col-xs-2 paddsmll">
+                                       <div class="cd-dropdown-wrapper">
+                                       <a class="cd-dropdown-trigger cd-dropdown-trigger-custom" href="javascript:void(0)">
+                                            <span class="menu-icon">
+                                            <span class="line_one"></span>
+                                            <span class="line_two"></span>
+                                            <span class="line_three"></span>
+                                       </span>
+                                       <span class="menutxt"></span></a>
+                                        <nav class="cd-dropdown">
+                                             
+                                             <h2><a href="javascript:void(0)"><img src="images/csvape-logo-sm.png" alt="CSVAPE"></a></h2>
+                                             <a href="javascript:void(0)" class="cd-close">Close</a>
+                                             <div class="c-sidebar c-sidebar--categories">
+                                                   <?php echo $this->getLayout()->createBlock("Sebwite\Sidebar\Block\Sidebar")->setTemplate("Sebwite_Sidebar::sidebar.phtml")->toHtml(); ?>
+                                              </div>
+                                             
+                                             
+                                             <ul class="cd-dropdown-content">
+                                                  <li>
+                                                        <form class="cd-search">
+                                                             <input type="search" placeholder="Search entire store here...">
+                                                       </form>
+                                                    </li>
+                                             </ul> 
+                                        </nav> 		
+                             
+                        </div>
+                                  </div>
+                                  <div class="col-xs-5 paddsmll logodiv">
+                                       <a class="mobile-logo" href="#"><img src="images/csvape-logo-sm.png" alt="CSVAPE"></a>
+                                  </div>
+                                  
+                                  <div class="col-xs-5 paddsmll cust-div">
+                                                                
+                                       <a class="user-menu" href="javascript:void(0)"><i class="fa fa-user" aria-hidden="true"></i> <span class="caret"></span></a>
+                                            <div class="user-profile">
+                                                 <ul>
+                                                      <li><a href="javascript:void(0)">Your Account</a></li>
+                                              <li><a href="javascript:void(0)">Your Orders</a></li>
+                                              <li><a href="javascript:void(0)">Your Wish List</a></li>
+                                              <li><a href="javascript:void(0)">Register</a></li>
+                                              <li><a href="javascript:void(0)">Logout</a></li>
+                                                 </ul>
+                                            </div>
+                                       
+                                       
+                                       <a class="contact-menu" href="tel:+1855-775-8273"><i class="fa fa-phone" aria-hidden="true"></i></a>					
+                                       <div class="contactDiv-mob">
+                                            <ul>
+                                                 <li><i class="fa fa-phone" aria-hidden="true"></i> 033-65555065 / 9831649999</li>
+                                                 <li><i class="fa fa-whatsapp" aria-hidden="true"></i> 9831649999</li>
+                                                 <li><a href="#"><i class="fa fa-envelope" aria-hidden="true"></i> care@prabhujionline.com</a></li>
+                                            </ul>
+                                       </div>
+                                       
+                                       <a class="user-cart" href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+                                       <div class="cart-div">
+                                            <p>0 item(s) <i class="fa fa-inr" aria-hidden="true"></i> 0.00</p>
+                                       </div>
+                                       
+                                  </div>
+                                  
+                             </div>
+                        </div>
+                        
+                        
+                        
+                   </div>	
+                    
+                      </div>
+         </div>	  
+     </div>  
+    
+     
+</div>

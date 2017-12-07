@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Techievolve_ReCaptcha::reCaptcha" title="Google reCaptcha" module="Techievolve_SuperiorService" sortOrder="30" parent="Techievolve_Core::core" action="adminhtml/system_config/edit/section/reCaptcha" resource="Techievolve_ReCaptcha::reCaptcha"/>
+    </menu>
+</config>

@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd"> 
+    <preference for="Magento\Checkout\Controller\Cart\Add" type="Artis\Wallmurals\Controller\Wallpaper\Add" />
+    <type name="Magento\Quote\Model\Quote\Item\ToOrderItem">
+        <plugin name="Artis_Wallmurals_Sales_Quote_Item_ToOrderItem" type="Artis\Wallmurals\Plugin\QuoteItemToOrderItem" />
+    </type>
+    
+    <preference for="Magento\Sales\Block\Adminhtml\Order\View\Items\Renderer\DefaultRenderer"
+                type="Artis\Wallmurals\Block\Adminhtml\Order\View\Items\Renderer\DefaultRenderer"/>
+    
+    <type name="Magento\Checkout\CustomerData\AbstractItem">
+        <plugin name="Change_Product_Image_In_Minicart" type="Artis\Wallmurals\Plugin\Minicart\Image" sortOrder="1"/>
+    </type>
+    
+</config>

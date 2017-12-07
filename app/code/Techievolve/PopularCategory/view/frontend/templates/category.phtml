@@ -1,0 +1,63 @@
+
+    <?php
+        $categoriesCollection = $this->getCategoryCollection();
+    ?>
+    <?php if(count($categoriesCollection)): ?>
+        <section class="Homepopular-cat">
+			<h2 class="section-title"><span>Popular</span> Categories <a class="sec-viewall" href="javascript:void(0)">View all</a></h2>
+         
+            <div class="owl-carousel owl-theme popularCat">
+                <?php foreach($categoriesCollection as $category): ?>
+				
+					<div class="item">
+						<?php if($category->getImage()): ?>
+							<?php $imageUrl = $this->resizeImage($category->getImage(),'catalog/category/',246,200);  ?>
+							<img class="cls-item-img" src="<?php echo $imageUrl; ?>" alt="<?php echo $category->getName(); ?>" title="<?php echo $category->getName(); ?>" />
+                        <?php else: ?>
+                            <img class="cls-item-img" src="<?php echo $this->getNoImageUrl(); ?>" alt="<?php echo $category->getName(); ?>" title="<?php echo $category->getName(); ?>" />
+						<?php endif; ?>
+						<a href="<?php echo $category->getUrl(); ?>" >View Details</a>
+						<h4><?php echo $category->getName(); ?></h4>
+					</div>				
+                <?php endforeach; ?>
+            </div>
+        </section>
+		
+		<script type="text/javascript">		
+		
+			require([
+				"jquery",
+				"owlcarousel"
+			], function($){
+			//<![CDATA[
+			
+				var owl = $('.owl-carousel.popularCat');
+				owl.owlCarousel({
+					loop: true,
+					margin: 10,
+					dots: false,
+					responsiveClass: true,
+					responsive: {
+						0: {
+							items: 1,
+							nav: true
+						},
+						600: {
+							items: 3,
+							nav: true
+						},
+						1000: {
+							items: 4,
+							nav: true,
+							loop: false,
+							margin: 20
+						}
+					}
+				});
+			 //]]>
+		});
+		</script>
+		
+		
+    <?php endif; ?>
+    <!--Products End -->

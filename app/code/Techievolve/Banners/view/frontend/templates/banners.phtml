@@ -1,0 +1,54 @@
+<?php $_banners = $this->getCollection(); ?>
+<?php if ($_banners->getSize()): ?>
+    <section class="homtop-slider">
+        <div class="owl-carousel owl-theme home-mainslider">
+        <?php foreach ($_banners as $bannersItem): ?>
+            <div id="item_<?php echo $bannersItem->getId() ?>" class="item">            
+                <?php if ($imageUrl = $this->getImageUrl($bannersItem, 335,318)): ?>
+                    <a href="#">
+                        <img src="<?php echo $imageUrl ?>" alt="<?php echo $this->escapeHtml($bannersItem->getTitle()); ?>" />
+                        <span class="slider-xplore">Explore Now</span>
+                    </a> 
+                <?php endif; ?>
+            </div>
+        <?php endforeach; ?>
+        </div>
+    </section>
+<?php endif ?>
+
+<script type="text/javascript">		
+		
+    require([
+        "jquery",
+        "owlcarousel"
+    ], function($){
+    //<![CDATA[
+    
+        var owl = $('.owl-carousel.home-mainslider');
+        owl.owlCarousel({
+            items: 3,
+            loop: true,
+            margin: 20,
+            autoplay: true,
+            autoplayTimeout: 3000,
+            autoplayHoverPause: true,
+            responsiveClass: true,
+            responsive: {
+                0: {
+                    items: 1,
+                    nav: false,					
+                },
+                600: {
+                    items: 3,
+                    nav: false
+                },
+                1000: {
+                    items: 3,					
+                }
+            }
+        });  
+        
+        
+    //]]>
+    });
+</script>

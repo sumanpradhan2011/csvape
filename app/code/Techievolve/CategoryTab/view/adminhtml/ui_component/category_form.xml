@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<form xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Ui:etc/ui_configuration.xsd">
+    
+    <fieldset name="megamenu" sortOrder="101">
+        
+         <argument name="data" xsi:type="array">
+            <item name="config" xsi:type="array">
+                <item name="label" xsi:type="string">Mega Menu</item>
+                <item name="collapsible" xsi:type="boolean">true</item>
+                <item name="sortOrder" xsi:type="number">99</item>
+            </item>
+        </argument>
+        
+        <field name="megamenu_display_type" sortOrder="30" formElement="select">
+            
+            <argument name="data" xsi:type="array">
+                <item name="options" xsi:type="object">Techievolve\CategoryTab\Model\Category\Attribute\Source\Blocktype</item>
+                <item name="config" xsi:type="array">
+                    <item name="sortOrder" xsi:type="number">20</item>
+                    <item name="dataType" xsi:type="string">text</item>
+                    <item name="formElement" xsi:type="string">select</item>
+                    <item name="label" xsi:type="string" translate="true">Display Block</item>
+                </item>
+            </argument>
+        </field>
+        
+        
+        <field name="megamenu_block" sortOrder="60" formElement="select">            
+            <argument name="data" xsi:type="array">
+                <item name="options" xsi:type="object">Magento\Catalog\Model\Category\Attribute\Source\Page</item>
+                <item name="config" xsi:type="array">
+                    <item name="sortOrder" xsi:type="number">30</item>
+                    <item name="dataType" xsi:type="string">text</item>
+                    <item name="formElement" xsi:type="string">select</item>
+                    <item name="label" xsi:type="string" translate="true">Select CMS Block</item>
+                </item>
+            </argument>
+        </field>
+        
+        
+    </fieldset>    
+</form>
